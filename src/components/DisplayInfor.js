@@ -28,6 +28,7 @@ class DisplayInfor extends React.Component {
                     <div>
                         {listUsers.map((user, index) => {
                             return (
+                                // convert string to number javascript thêm dấu + ở phía trước
                                 <div key={user.id} className={+user.age > 18 ? "green" : "red"} >
                                     <div>My name's {user.name} </div>
                                     <div>My age's {user.age} </div>
