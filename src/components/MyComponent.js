@@ -28,22 +28,37 @@ class MyComponent extends React.Component {
         })
 
     }
+    handleDeleteUser = (userId) => {
+        let listUsersClone = [...this.state.listUsers]
+        listUsersClone = listUsersClone.filter(item => item.id !== userId);
+        this.setState({
+            listUsers: listUsersClone
+        })
+    }
     render() {
 
-        // DRY: dont't repeat youseft
+        // DRY: don't repeat youself
+
         return (
-            <div>
-                <AddUserInfor
-                    handleAddNewUser={this.handleAddNewUser} // truyền 1 function thì không dùng dấu ()
-                />
-                <br></br>
-                <br></br>
-                <DisplayInfor
-                    listUsers={this.state.listUsers}
 
-                />
-            </div>
+            <>
 
+                <br />
+                <div className='a'>
+                    <AddUserInfor
+                        handleAddNewUser={this.handleAddNewUser} // truyền 1 function thì không dùng dấu ()
+                    />
+                    <br></br>
+                    <br></br>
+                    <DisplayInfor
+                        listUsers={this.state.listUsers}
+                        handleDeleteUser={this.handleDeleteUser}
+                    />
+                </div>
+                <div className='b'>
+
+                </div>
+            </>
         );
     }
 }
