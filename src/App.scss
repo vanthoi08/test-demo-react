@@ -15,11 +15,26 @@ body {
 .app-container{
   .header-container{
     .navbar-nav {
+      z-index: 10;
+      opacity: 0.6;
       .nav-link{
         &.active{
           color: rgb(0, 136, 255);
       }
     }  
     }
+  }
+}
+.navbar-brand{
+  z-index: 10;
+}
+.settings{
+  z-index: 5;
+}
+.homepage-container{
+  video{
+    position: fixed;
+   bottom: 0;
+    width: 100vw;
   }
 }
