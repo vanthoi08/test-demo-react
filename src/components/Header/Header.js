@@ -10,6 +10,9 @@ const Header = () => {
     const handleLogin = () => {
         navigate('/login');
     }
+    const handleRegister = () => {
+        navigate('/register');
+    }
     return (
         <Navbar expand="lg">
             <Container>
@@ -28,7 +31,7 @@ const Header = () => {
                         <Nav.Link href="/admins">Admin</Nav.Link> */}
                     </Nav>
                     <button className='btn-login' onClick={() => handleLogin()}>Log in</button>
-                    <button className='btn-signup'>Sign up</button>
+                    <button className='btn-signup' onClick={() => handleRegister()}>Sign up</button>
                     <nav>
                         {/* <NavDropdown title="Settings" id="basic-nav-dropdown">
                             <NavDropdown.Item >Login</NavDropdown.Item>
