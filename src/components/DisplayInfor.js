@@ -37,7 +37,7 @@ const DisplayInfor = (props) => {
                 alert('You deleted all the users');
             }
             console.log('>>> call me useEffect ')
-        }, [abc]
+        }, []
     );
 
 
